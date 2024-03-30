@@ -67,13 +67,13 @@
         <div class="column is-8-tablet is-6-desktop card-column">
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">Band Locking</p>
+              <p class="card-header-title">Khóa băng tần</p>
             </header>
             <div class="card-content">
               <!-- Create a drop down -->
               <div class="select is-primary">
                 <select id="networkMode" x-model="networkMode">
-                  <option>Select Network Mode</option>
+                  <option>Chọn Chế Độ Mạng</option>
                   <option>LTE</option>
                   <option>NR5G-NSA</option>
                   <option>NR5G-SA</option>
@@ -93,7 +93,7 @@
                   @click="lockBands()"
                   :disabled="isLocking"
                 >
-                  Lock Bands
+                  Khoá Band
                 </button>
 
                 <button
@@ -102,15 +102,15 @@
                   @click="restoreBands()"
                   :disabled="isLocking"
                 >
-                  Restore Bands
+                  Khôi Phục Band
                 </button>
               </div>
             </div>
             <div class="card-footer" style="padding: 0.25rem">
               <p class="card-footer-item">
-                Please first select your desired network band from the dropdown
-                menu. To lock onto specific bands, please type the band numbers
-                separated by commas (,) and then click the lock button.
+                Trước tiên hãy chọn băng tần mạng mong muốn của bạn từ menu thả xuống
+                . Để khóa các dải cụ thể, vui lòng nhập số dải được phân tách bằng dấu phẩy (,)
+                (,) rồi nhấp vào nút khóa.
               </p>
             </div>
           </div>
@@ -119,13 +119,13 @@
         <div class="column is-8-tablet is-6-desktop card-column">
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">LTE and NR5G Cell Locking</p>
+              <p class="card-header-title">Khóa di động LTE và NR5G</p>
             </header>
             <div class="card-content">
               <div style="display: flex; flex-direction: row">
                 <div class="select is-info">
                   <select id="networkModeSelect" x-model="networkMode2">
-                    <option>Select Network Mode</option>
+                    <option>Chọn Chế Độ Mạng</option>
                     <option>LTE</option>
                     <option>NR5G-SA</option>
                   </select>
@@ -189,7 +189,7 @@
                   @click="cellLock()"
                   :disabled="isLocking"
                 >
-                  Lock Cell
+                  Khoá Ô
                 </button>
 
                 <button
@@ -198,17 +198,17 @@
                   @click="restoreCell()"
                   :disabled="isLocking"
                 >
-                  Restore Cell
+                  Khôi Phục Ô
                 </button>
               </div>
             </div>
             <div class="card-footer" style="padding: 0.25rem">
               <p class="card-footer-item">
-                To utilize cell locking, first, select the network mode, then
-                specify the number of cells you wish to lock onto (max 10) if
-                you are using LTE. Next, input the EARFCN and PCI values for
-                each cell number. If you are locking through NR5G-SA instead,
-                simply fill up all the required parameters.
+                Để sử dụng tính năng khóa mạng, trước tiên, hãy chọn chế độ mạng, sau đó
+                chỉ định số lượng ô bạn muốn khóa (tối đa 10) nếu bạn đang sử dụng LTE.
+                Tiếp theo, nhập giá trị EARFCN và PCI cho từng số ô . Thay vào đó, nếu bạn đang khóa 
+                thông qua NR5G-SA, bạn chỉ cần điền tất cả các tham số được yêu cầu.
+                
               </p>
             </div>
           </div>
