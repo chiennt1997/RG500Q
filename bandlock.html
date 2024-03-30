@@ -219,12 +219,12 @@
         <div class="column is-8-tablet is-6-desktop card-column">
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">Network Utilities</p>
+              <p class="card-header-title">Tiện Ích Mạng</p>
             </header>
             <div class="card-content">
               <div style="display: flex; flex-direction: column">
                 <div>
-                  <p>Set Network APN</p>
+                  <p>Đặt APN Mạng</p>
                   <div
                     style="
                       display: flex;
@@ -244,20 +244,20 @@
                       @click="setAPN()"
                       :disabled="isLoading"
                     >
-                      Set APN
+                      Đặt APN
                     </button>
                   </div>
                 </div>
               </div>
 
               <div style="margin-top: 1rem">
-                <p>Set Preferred Network Mode</p>
+                <p>Đặt chế độ mạng ưa thích</p>
                 <div
                   style="display: flex; flex-direction: row; margin-top: 0.5rem"
                 >
                   <div class="select is-info">
                     <select id="prefNetworkMode" x-model="prefNetworkMode">
-                      <option>Select Network</option>
+                      <option>Chọn Mạng</option>
                       <option>AUTO</option>
                       <option>WCDMA</option>
                       <option>LTE ONLY</option>
@@ -272,19 +272,19 @@
                     @click="setPrefNetwork()"
                     :disabled="isLoading"
                   >
-                    Set Network
+                    Đặt Mạng
                   </button>
                 </div>
               </div>
 
               <div style="margin-top: 1rem">
-                <p>Set Sim Slot</p>
+                <p>Chọn Khe Sim</p>
                 <div
                   style="display: flex; flex-direction: row; margin-top: 0.5rem"
                 >
                   <div class="select is-info">
                     <select id="simSlot" x-model="simSlot">
-                      <option>Select Sim</option>
+                      <option>Chọn Sim</option>
                       <option>1</option>
                       <option>2</option>
                     </select>
@@ -296,19 +296,19 @@
                     @click="setSimSlot()"
                     :disabled="isLoading"
                   >
-                    Set Sim
+                    Đặt Sim
                   </button>
                 </div>
               </div>
 
               <div style="margin-top: 1rem">
-                <p>NR5G Mode Control</p>
+                <p>Kiểm Soát Chế Độ 5Gl</p>
                 <div
                   style="display: flex; flex-direction: row; margin-top: 0.5rem"
                 >
                   <div class="select is-info">
                     <select id="nrMode" x-model="nrMode">
-                      <option>Select NR5G Mode</option>
+                      <option>Chọn Chế Độ 5G</option>
                       <option>Enable All</option>
                       <option>Disable NSA</option>
                       <option>Disable SA</option>
@@ -321,17 +321,17 @@
                     @click="nr5GMode()"
                     :disabled="isLoading"
                   >
-                    Set Mode
+                    Đặt Chế Độ
                   </button>
                 </div>
               </div>
             </div>
             <div class="card-footer" style="padding: 0.25rem">
               <p class="card-footer-item">
-                This section allows you to set the APN, preferred network mode,
-                and sim slot. Simply input the desired values and click the
-                respective buttons to apply the changes. (Sim slot is only
-                applicable for dual sim devices.)
+                Phần này cho phép bạn đặt APN, chế độ mạng ưu tiên và khe cắm sim. Chỉ cần
+                nhập các giá trị mong muốn và nhấp vào nút tương ứng để áp dụng các thay
+                đổi. (Khe cắm sim chỉ áp dụng cho các thiết bị hai sim.)
+                
               </p>
             </div>
           </div>
@@ -341,18 +341,18 @@
         <div class="column is-8-tablet is-6-desktop card-column">
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">Query Network Parameters</p>
+              <p class="card-header-title">Tham số mạng truy vấn</p>
             </header>
             <div class="card-content">
               <textarea
                 class="textarea"
                 rows="5"
-                placeholder="Query Response"
+                placeholder="Phản hồi truy vấn"
                 x-text=" isLoading ? 'Getting Response...' : queryCommandResponse"
               ></textarea>
 
               <div style="margin-top: 1.5rem">
-                <p>Check Locked Bands</p>
+                <p>Kiểm tra các dải bị khóa</p>
                 <div class="select is-info" style="margin-top: 0.5rem">
                   <select id="lockedBands" x-model="lockedBands">
                     <option>Locked Bands</option>
