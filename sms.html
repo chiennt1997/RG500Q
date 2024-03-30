@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- change to a much simpler tab title -->
-    <title>Xem Tin Nhắn</title>
+    <title>SMS Viewer</title>
 
     <script src="/js/alpinejs.min.js" defer></script>
     <link rel="stylesheet" href="/css/bulma.css" />
@@ -18,7 +18,7 @@
     <nav class="navbar is-black" x-data="{ isOpen: false }">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item brand-text" href="/"> Chiến NT97 </a>
+          <a class="navbar-item brand-text" href="/"> Simple Admin </a>
           <a
             role="button"
             class="navbar-burger burger"
@@ -35,12 +35,12 @@
           :class="isOpen ? 'is-active' : ''"
         >
           <div class="navbar-start">
-            <a class="navbar-item" href="/"> Thông Tin </a>
-            <a class="navbar-item" href="/atcommander.html"> Lệnh AT </a>
-			<a class="navbar-item" href="/bandlock.html"> Khoá Band </a>
-            <a class="navbar-item" href="/sms.html"> Xem SMS </a>
-            <a class="navbar-item" href="/ttl.html"> Đổi TTL </a>
-            <a class="navbar-item" href="/speedtest.html"> Kiểm Tra Speedtest </a>
+            <a class="navbar-item" href="/"> Connection Info </a>
+            <a class="navbar-item" href="/atcommander.html"> Simple Settings </a>
+            <a class="navbar-item" href="/bandlock.html"> Simple Network </a>
+            <a class="navbar-item" href="/sms.html"> SMS </a>
+            <a class="navbar-item" href="/ttl.html"> TTL Changer </a>
+            <a class="navbar-item" href="/speedtest.html"> Speedtest </a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
             <div class="column is-8">
               <div class="card">
                 <header class="card-header">
-                  <p class="card-header-title">TIN NHẮN</p>
+                  <p class="card-header-title">SMS Viewer</p>
                   <div class="field">
                     <p class="control">
                       <button
@@ -61,7 +61,7 @@
                         @click="sendAtCommand()"
                         :disabled="isLoading"
                       >
-                        Làm mới
+                        Refresh
                       </button>
                     </p>
                   </div>
@@ -72,7 +72,7 @@
                         @click="sendAtCommand()"
                         :disabled="isLoading"
                       >
-                        Xóa
+                        Delete
                       </button>
                     </p>
                   </div>
@@ -81,10 +81,10 @@
                   <div class="content">
                     <textarea
                       class="textarea"
-                      placeholder="Tin Nhắn hiển thị ở đây"
+                      placeholder="SMS Viewer (Make sure to run: AT+CMGF=1 first)"
                       readonly
-                      rows="50"
-                      cols="120"
+                      rows="10"
+                      cols="50"
                       x-model="atCommandResponse"
                       :disabled="isLoading"
                     ></textarea>
