@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- change to a much simpler tab title -->
-    <title>SMS Viewer</title>
+    <title>Xem Tin Nhắn</title>
 
     <script src="/js/alpinejs.min.js" defer></script>
     <link rel="stylesheet" href="/css/bulma.css" />
@@ -37,7 +37,7 @@
           <div class="navbar-start">
             <a class="navbar-item" href="/"> Thông Tin </a>
             <a class="navbar-item" href="/atcommander.html"> Lệnh AT </a>
-            <a class="navbar-item" href="/bandlock.html"> Khoá Band </a>
+			<a class="navbar-item" href="/bandlock.html"> Khoá Band </a>
             <a class="navbar-item" href="/sms.html"> Xem SMS </a>
             <a class="navbar-item" href="/ttl.html"> Đổi TTL </a>
             <a class="navbar-item" href="/speedtest.html"> Kiểm Tra Speedtest </a>
@@ -53,7 +53,7 @@
             <div class="column is-8">
               <div class="card">
                 <header class="card-header">
-                  <p class="card-header-title">SMS Viewer</p>
+                  <p class="card-header-title">TIN NHẮN</p>
                   <div class="field">
                     <p class="control">
                       <button
@@ -61,7 +61,7 @@
                         @click="sendAtCommand()"
                         :disabled="isLoading"
                       >
-                        Refresh
+                        Làm mới
                       </button>
                     </p>
                   </div>
@@ -72,7 +72,7 @@
                         @click="sendAtCommand()"
                         :disabled="isLoading"
                       >
-                        Delete
+                        Xóa
                       </button>
                     </p>
                   </div>
@@ -81,10 +81,10 @@
                   <div class="content">
                     <textarea
                       class="textarea"
-                      placeholder="SMS Viewer (Make sure to run: AT+CMGF=1 first)"
+                      placeholder="Tin Nhắn hiển thị ở đây"
                       readonly
-                      rows="10"
-                      cols="50"
+                      rows="50"
+                      cols="120"
                       x-model="atCommandResponse"
                       :disabled="isLoading"
                     ></textarea>
