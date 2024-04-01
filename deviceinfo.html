@@ -61,15 +61,13 @@
                   <a class="nav-link" href="/settings.html">Simple Settings</a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    href="/sms.html"
-                    aria-current="page"
-                    >SMS</a
-                  >
+                  <a class="nav-link" href="/sms.html">SMS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/deviceinfo.html"
+                  <a
+                    class="nav-link active"
+                    href="/deviceinfo.html"
+                    aria-current="page"
                     >Device Information</a
                   >
                 </li>
@@ -83,47 +81,90 @@
           </div>
         </nav>
 
-        <div class="row mt-5 mb-4">
+        <div class="row mt-5 gap-3">
           <div class="col">
             <div class="card">
-              <div class="card-header">SMS Manager</div>
+              <div class="card-header">Device Information</div>
               <div class="card-body">
                 <div class="card-text">
-                  <div class="form-floating mb-4">
-                    <!-- At commands output here -->
-                    <textarea
-                      class="form-control"
-                      placeholder="ATI"
-                      id="atOutputBox"
-                      style="height: 380px"
-                    >
-                    </textarea>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Manufacturer</th>
+                          <td>Quectel</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Model Name</th>
+                          <td>RM520N-GL</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Firmware version</th>
+                          <td class="col-md-2">
+                            RM520NGLAAR01A08M4G_01.200.01.200
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">IMSI</th>
+                          <td class="col-md-2">515031726432435</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">ICCID</th>
+                          <td class="col-md-2">89630321281171069681</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">IMEI</th>
+                          <td class="col-md-2">
+                            <input
+                              class="form-control"
+                              type="text"
+                              placeholder="354721880318608"
+                            />
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-primary">
+                              Update
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">LAN IP</th>
+                          <td class="col-md-2">192.168.225.1</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">WWAN IPv<sup>4</sup></th>
+                          <td class="col-md-2">10.150.12.160</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">WWAN IPv<sup>6</sup></th>
+                          <td class="col-md-2">0:0:0:0:0:0:0:0</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Simple Admin Version</th>
+                          <td class="col-md-2">SimpleAdminRev-Alpha-0.1</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <form>
-                    <div class="col-md-8 mb-3">
-                      <label for="exampleInputEmail1" class="form-label"
-                        >Send SMS</label
-                      >
-                      <!-- Text Area Here for SMS Input -->
-                        <textarea
-                            class="form-control"
-                            id="smsInputBox"
-                            rows="5"
-                            placeholder="Enter SMS here"
-                        ></textarea>
-                    </div>
-                    <div
-                      class="d-grid gap-2 d-md-flex justify-content-md-start"
-                    >
-                      <button class="btn btn-primary me-md-2" type="button">
-                        Submit
-                      </button>
-                      <button class="btn btn-success" type="button">
-                        Refresh
-                      </button>
-                    </div>
-                  </form>
                 </div>
+              </div>
+              <div class="card-footer">
+                Visit our
+                <a
+                  href="https://github.com/iamromulan/quectel-rgmii-toolkit.gits"
+                  target="_blank"
+                  class="text-reset"
+                  >repository</a
+                >
+                or
+                <a
+                  href="https://github.com/iamromulan/quectel-rgmii-configuration-notes.git"
+                  target="_blank"
+                  class="text-reset"
+                  >documentation</a
+                >
+                for more information. All rights reserved. 2024
               </div>
             </div>
           </div>
